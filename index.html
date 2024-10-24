@@ -47,7 +47,29 @@
             </button>
         </div>
     </div>
-<script>var provider = new firebase.auth.FacebookAuthProvider();</script>
+	<!-- Insert this script at the bottom of the HTML, but before you use any Firebase services -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js'
+	  // TODO: Replace the following with your app's Firebase project configuration
+    const firebaseConfig = {
+  apiKey: "AIzaSyBbVCXDY6i_OKIX96DcgF8rIV2OTGsrqlk",
+  authDomain: "social-con-98b07.firebaseapp.com",
+  projectId: "social-con-98b07",
+  storageBucket: "social-con-98b07.appspot.com",
+  messagingSenderId: "842479232809",
+  appId: "1:842479232809:web:e63b9c55120f5798e77938"
+};
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
     <script>
         function submitForm() {
             const email = 
